@@ -1,13 +1,12 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 const makeCss =
   (size: number) =>
-  (...args: any[]) =>
-    css`
-      @media (max-width: ${size}px) {
-        ${(css as any)(...args)}
-      }
-    `;
+  (...args: any[]) => css`
+    @media (max-width: ${size}px) {
+      ${(css as any)(...args)}
+    }
+  `
 
 export const MediaQueries = {
   mobileS: makeCss(320),
@@ -17,4 +16,4 @@ export const MediaQueries = {
   laptop: makeCss(1024),
   laptopL: makeCss(1440),
   desktop: makeCss(2560),
-};
+}

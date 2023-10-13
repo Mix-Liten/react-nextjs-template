@@ -1,20 +1,16 @@
-import {
-  ThemeProvider,
-  createGlobalStyle,
-  DefaultTheme,
-} from "styled-components";
-import { ReactNode } from "react";
+import { ThemeProvider, createGlobalStyle, DefaultTheme } from 'styled-components'
+import { ReactNode } from 'react'
 
-import theme from "@/themes";
+import theme from '@/themes'
 
 const GlobalStyle = createGlobalStyle`
     body {
       /* you can add global style here */
     }
-`;
+`
 
 interface IProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const DynamicTheme = ({ children }: IProps) => {
@@ -25,7 +21,7 @@ const DynamicTheme = ({ children }: IProps) => {
         {children}
       </>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default DynamicTheme;
+export default DynamicTheme

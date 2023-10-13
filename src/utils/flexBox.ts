@@ -1,4 +1,4 @@
-import { css, FlattenSimpleInterpolation } from 'styled-components';
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 
 export enum Direction {
   row = 'row',
@@ -25,9 +25,9 @@ export enum CrossAlignment {
 }
 
 interface FlexBoxArgs {
-  direction?: Direction;
-  mainAlign?: MainAlignment;
-  crossAlign?: CrossAlignment;
+  direction?: Direction
+  mainAlign?: MainAlignment
+  crossAlign?: CrossAlignment
 }
 
 export function flexBox({
@@ -40,5 +40,5 @@ export function flexBox({
     flex-direction: ${direction};
     justify-content: ${mainAlign};
     align-items: ${crossAlign};
-  `;
+  `
 }

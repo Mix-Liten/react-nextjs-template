@@ -1,6 +1,13 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import DynamicTheme from "@/themes/DynamicTheme";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <DynamicTheme>
+      <Component {...pageProps} />
+    </DynamicTheme>
+  );
 }
+
+export default App;
